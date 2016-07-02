@@ -5,6 +5,6 @@ import {SatellizerConfig} from './config/satellizer.config';
 
 angular.module('app.config')
     .config(RoutesConfig)
-	.config(LoadingBarConfig)
-	.config(ThemeConfig)
-	.config(SatellizerConfig);
+    .config(LoadingBarConfig)
+    .config(ThemeConfig)
+    .config(SatellizerConfig)

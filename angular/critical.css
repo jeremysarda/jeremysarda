@@ -1,15 +1,18 @@
-body{
+body {
     margin: 0;
 }
-#app-shell-header{
+
+#app-shell-header {
     background-color: white;
     height: 64px;
 }
-#app-shell-header img{
+
+#app-shell-header img {
     padding: 13px 0;
     margin-left: 5%;
 }
-#app-shell-content{
+
+#app-shell-content {
     background-color: #00A4C6;
     min-height: 600px;
 }

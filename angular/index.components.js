@@ -7,11 +7,11 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
-	.component('appHeader', AppHeaderComponent)
-	.component('appView', AppViewComponent)
-	.component('appShell', AppShellComponent)
-	.component('resetPassword', ResetPasswordComponent)
-	.component('forgotPassword', ForgotPasswordComponent)
-	.component('loginForm', LoginFormComponent)
-	.component('registerForm', RegisterFormComponent);
+    .component('appHeader', AppHeaderComponent)
+    .component('appView', AppViewComponent)
+    .component('appShell', AppShellComponent)
+    .component('resetPassword', ResetPasswordComponent)
+    .component('forgotPassword', ForgotPasswordComponent)
+    .component('loginForm', LoginFormComponent)
+    .component('registerForm', RegisterFormComponent);
 

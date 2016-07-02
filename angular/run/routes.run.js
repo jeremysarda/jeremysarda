@@ -7,11 +7,12 @@ export function RoutesRun($state, $transitions) {
 
     let redirectToLogin = ($auth) => {
         'ngInject';
+
         if (!$auth.isAuthenticated()) {
             return $state.target('app.login', undefined, {location: false});
         }
     };
 
-    $transitions.onBefore(requiresAuthCriteria, redirectToLogin, {priority:10});
+    $transitions.onBefore(requiresAuthCriteria, redirectToLogin, {priority: 10});
 
 }
