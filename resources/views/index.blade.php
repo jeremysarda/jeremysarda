@@ -30,7 +30,7 @@
 	<meta name="msapplication-square310x310logo" content="/img/icons/largetile.png"/>
 
 	<!-- Critical CSS (Applied Immediately) -->
-	<style type="text/css"><?php require( app_path("../angular/critical.css") ) ?></style>
+	<style type="text/css"><?php require( public_path( "css/critical.css" ) ) ?></style>
 
 	<!--[if lte IE 10]>
 	<script type="text/javascript">document.location.href = '/unsupported-browser'</script>
@@ -46,7 +46,6 @@
 </app-shell>
 
 <app-view></app-view>
-
 
 <script async defer>
 	(function (link) {

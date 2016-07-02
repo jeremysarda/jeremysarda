@@ -3,6 +3,7 @@ require('./tasks/angular.task.js');
 require('./tasks/bower.task.js');
 require('./tasks/ngHtml2Js.task.js');
 require('./tasks/swPrecache.task.js');
+require('./tasks/critical.task.js');
 require('./tasks/concatScripts.task.js');
 require('laravel-elixir-karma');
 
@@ -47,6 +48,7 @@ elixir(function (mix) {
         .styles(styles, './public/css/final.css')
         .version(assets)
         .swPrecache()
+        .critical('./angular/material/critical.scss', 'public/css/critical.css')
         .browserSync({
             proxy: 'jeremysarda.dev'
         })
