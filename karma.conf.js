@@ -1,4 +1,4 @@
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
 
         basePath: '',
@@ -24,7 +24,7 @@ module.exports = function(config) {
             transform: ['babelify', 'stringify']
         },
 
-        plugins : [
+        plugins: [
             'karma-jasmine',
             'karma-phantomjs-launcher',
             'karma-browserify',

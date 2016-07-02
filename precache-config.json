@@ -12,18 +12,23 @@
   ],
   "stripPrefix": "public",
   "maximumFileSizeToCacheInBytes": 5242880,
-  "runtimeCaching": [{
-    "urlPattern": "'/'",
-    "handler": "cacheFirst"
-  }, {
-    "urlPattern": "'https://fonts.googleapis.com/'",
-    "handler": "cacheFirst"
-  }, {
-    "urlPattern": "'https://fonts.gstatic.com/'",
-    "handler": "cacheFirst"
-  }, {
-    "urlPattern": "'https://ghbtns.com/'",
-    "handler": "cacheFirst"
-  }],
+  "runtimeCaching": [
+    {
+      "urlPattern": "'/'",
+      "handler": "cacheFirst"
+    },
+    {
+      "urlPattern": "'https://fonts.googleapis.com/'",
+      "handler": "cacheFirst"
+    },
+    {
+      "urlPattern": "'https://fonts.gstatic.com/'",
+      "handler": "cacheFirst"
+    },
+    {
+      "urlPattern": "'https://ghbtns.com/'",
+      "handler": "cacheFirst"
+    }
+  ],
   "handleFetch": true
 }

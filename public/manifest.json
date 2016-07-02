@@ -1,16 +1,16 @@
 {
   "lang": "en-us",
-  "background_color": "#FFFFFF",
-  "theme_color": "#0690B7",
-  "name": "Laravel & Angular",
-  "short_name": "Laravel & Angular",
+  "name": "JeremySarda.com - June 2016",
+  "short_name": "JeremySarda.com - June 2016",
   "display": "standalone",
-  "start_url": "/?homescreen=1",
+  "start_url": "\/",
+  "background_color": "#ffffff",
+  "theme_color": "#8A8A8A",
   "icons": [
     {
-      "src": "img/icon.png",
+      "src": "img\/icon.png",
       "sizes": "198x198",
-      "type": "image/png"
+      "type": "image\/png"
     }
   ]
 }

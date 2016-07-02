@@ -17,7 +17,7 @@ require('laravel-elixir-karma');
  |
  */
 
-elixir(function(mix) {
+elixir(function (mix) {
 
     var assets = [
             'public/js/final.js',
@@ -48,7 +48,7 @@ elixir(function(mix) {
         .version(assets)
         .swPrecache()
         .browserSync({
-            proxy: 'localhost:8000'
+            proxy: 'jeremysarda.dev'
         })
         .karma({
             jsDir: karmaJsDir

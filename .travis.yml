@@ -24,4 +24,4 @@ before_script:
 install:
   - travis_retry composer create-project jadjoubran/laravel5-angular-material-starter=dev-master --no-interaction --prefer-source
 
-script: cd laravel5-angular-material-starter && npm install -g gulp bower && npm install && bower install && php artisan migrate --force && gulp && vendor/bin/phpunit
+script: cd jeremysarda && npm install -g gulp bower && npm install && bower install && php artisan migrate --force && gulp && vendor/bin/phpunit

@@ -7,9 +7,9 @@ var preCacheConfig = require('./../precache-config.json');
 
 var Task = Elixir.Task;
 
-Elixir.extend('swPrecache', function() {
+Elixir.extend('swPrecache', function () {
 
-    new Task('generateServiceWorker', function() {
+    new Task('generateServiceWorker', function () {
 
         return swPrecache.write(path.join('public', 'service-worker.js'), preCacheConfig);
 
