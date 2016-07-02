@@ -18,6 +18,8 @@
     "restangular": "~1.5.2",
     "angular-loading-bar": "~0.9.0",
     "satellizer": "^0.14.0",
-    "bourbon": "^4.2.7"
+    "bourbon": "^4.2.7",
+    "waypoints": "^4.0.0",
+    "angular-jqcloud": "^1.0.3"
   }
 }
