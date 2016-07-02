@@ -45,7 +45,7 @@ elixir(function (mix) {
         .ngHtml2Js('./angular/**/*.html')
         .concatScripts(scripts, 'final.js')
         .critical('./angular/material/critical.scss', 'public/css/critical.css')
-        .sass('./angular/**/*.scss', 'public/css')
+        .sass(['./angular/material/main.scss', './angular/app/**/*.scss'], 'public/css')
         .styles(styles, './public/css/final.css')
         .version(assets)
         .swPrecache()

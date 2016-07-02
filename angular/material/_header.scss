@@ -7,14 +7,12 @@
  * TODO: Turn this into a mixin so we can have other elements/directives that can react to waypoint triggers.
  */
 
-.wp-header {
-
-  $wp-prefix: #{&};
+header.wp-target {
 
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+
   padding: 0;
   z-index: 50;
   font-family: 'Lato', Arial, sans-serif;
@@ -56,6 +54,11 @@
       animation: spin 2.5s infinite linear;
     }
   }
+}
+
+.wp-target {
+
+  $wp-prefix: #{&};
 
   /*
    * Text styling
@@ -146,7 +149,7 @@
     -moz-perspective-origin: 50% 0;
     perspective-origin: 50% 0;
 
-    .wp-header-bottom {
+    #{$wp-prefix}-bottom {
       background: #ddd;
       -webkit-transform-origin: 50% 0%;
       -moz-transform-origin: 50% 0%;
@@ -165,7 +168,7 @@
     > div {
       background: #fff;
       text-align: left;
-      padding: 0 7%;
+      padding: 0;
       height: 50%;
       width: 100%;
       margin: 0 auto;
@@ -272,10 +275,8 @@
     &shrink {
       height: 220px;
       top: 50px;
-      padding-left: 50px;
-      padding-right: 50px;
 
-      .wp-header-bottom {
+      #{$wp-prefix}-bottom {
         opacity: 0;
       }
     }
@@ -283,16 +284,14 @@
     &rotate {
       height: 220px;
       top: 50px;
-      padding-left: 50px;
-      padding-right: 50px;
 
-      .wp-header-front {
+      #{$wp-prefix}-front {
         -webkit-transform: translateY(-100%) rotateX(90deg);
         -moz-transform: translateY(-100%) rotateX(90deg);
         transform: translateY(-100%) rotateX(90deg);
       }
 
-      .wp-header-bottom {
+      #{$wp-prefix}-bottom {
         top: 50%;
         -webkit-transition: -webkit-transform 0.5s;
         -moz-transition: -moz-transform 0.5s;
@@ -309,13 +308,13 @@
       padding-left: 50px;
       padding-right: 50px;
 
-      .wp-header-front {
+      #{$wp-prefix}-front {
         -webkit-transform: translateY(0%) rotateX(0deg);
         -moz-transform: translateY(0%) rotateX(0deg);
         transform: translateY(0%) rotateX(0deg);
       }
 
-      .wp-header-bottom {
+      #{$wp-prefix}-bottom {
         top: 50%;
         -webkit-transition: -webkit-transform 0.5s;
         -moz-transition: -moz-transform 0.5s;
@@ -329,8 +328,8 @@
     &color {
       height: 420px;
 
-      .wp-header-front,
-      .wp-header-bottom {
+      #{$wp-prefix}-front,
+      #{$wp-prefix}-bottom {
         background: #f3796c;
       }
 
@@ -366,11 +365,11 @@
       height: 100%;
       opacity: 0.9;
 
-      .wp-header-front {
+      #{$wp-prefix}-front {
         height: 100%;
       }
 
-      .wp-header-bottom {
+      #{$wp-prefix}-bottom {
         opacity: 0;
         -webkit-transition: top 0.5s, opacity 0s 0.5s;
         -moz-transition: top 0.5s, opacity 0s 0.5s;
@@ -387,11 +386,11 @@
       height: 100%;
       opacity: 0.9;
 
-      .wp-header-bottom nav a {
+      #{$wp-prefix}-bottom nav a {
         color: #fff;
       }
 
-      .wp-header-bottom {
+      #{$wp-prefix}-bottom {
         -webkit-transition: top 0.5s;
         -moz-transition: top 0.5s;
         transition: top 0.5s;
@@ -419,21 +418,21 @@
 
 @media screen and (max-width: 60em) {
 
-  .wp-header-perspective > div,
-  .wp-header nav {
+  .wp-target-perspective > div,
+  .wp-target nav {
     text-align: center;
   }
 
-  .wp-header h1 {
+  .wp-target h1 {
     padding: 10px 0;
     height: 60%;
   }
 
-  .wp-header .wp-header-bottom nav {
+  .wp-target .wp-target-bottom nav {
     padding: 40px 0px;
   }
 
-  .wp-header nav {
+  .wp-target nav {
     display: block;
     height: auto;
   }
@@ -446,11 +445,11 @@
     font-size: 1.3em;
   }
 
-  .wp-header h1 {
+  .wp-target h1 {
     font-size: 2em;
   }
 
-  .wp-header nav {
+  .wp-target nav {
     font-size: 60%;
   }
 }

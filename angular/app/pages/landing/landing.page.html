@@ -1,38 +1,35 @@
-<section>
+<md-content flex="90" flex-offset="5">
 
-    <div class="half-screen">
+    <section layout="row">
 
-        <div class="isolayer isolayer--deco4"
-             style="transform-style: preserve-3d; transform: perspective(3000px) translate3d(-200px, -200px, 0px) scale3d(0.8, 0.8, 1) rotateY(45deg) rotateZ(-10deg);">
+        <div class="half-screen" flex="50">
 
         </div>
 
-    </div>
+        <div class="half-screen" flex="50">
 
-    <div class="half-screen">
+        </div>
 
-    </div>
+    </section>
 
-</section>
+    <section waypoint-trigger down="wp-target.above-the-fold" up="wp-target.above-the-fold" offset="100%">
 
-<section waypoint-trigger down="wp-header.above-the-fold" up="wp-header.above-the-fold" offset="100%">
+    </section>
 
-</section>
+    <section waypoint-trigger down="wp-target.shrink" up="wp-target.above-the-fold" offset="100%">
 
-<section waypoint-trigger down="wp-header.shrink" up="wp-header.above-the-fold" offset="100%">
+    </section>
 
-</section>
+    <section waypoint-trigger down="wp-target.rotate" up="wp-target.shrink" offset="100%">
 
-<section waypoint-trigger down="wp-header.rotate" up="wp-header.shrink" offset="100%">
+    </section>
 
-</section>
+    <section waypoint-trigger down="wp-target.subshow" up="wp-target.shrink" offset="100%">
 
-<section waypoint-trigger down="wp-header.subshow" up="wp-header.shrink" offset="100%">
+    </section>
 
-</section>
-
-<section waypoint-trigger down="wp-header.subfullscreen" up="wp-header.subshow" offset="100%">
-    <jqcloud words='[
+    <section waypoint-trigger down="wp-target.subfullscreen" up="wp-target.subshow" offset="100%">
+        <jqcloud words='[
             {text: "Laravel", weight: 13},
             {text: "CSS", weight: 10.5},
             {text: "AngularJS", weight: 9.4},
@@ -41,4 +38,6 @@
             {text: "Podcast", weight: 5},
             {text: "Ruby on Rails", weight: 5}
         ]' height="350" steps="7"></jqcloud>
-</section>
+    </section>
+
+</md-content>
