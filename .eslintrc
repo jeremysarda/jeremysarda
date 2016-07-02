@@ -1,6 +1,8 @@
 {
   "extends": "eslint:recommended",
-  "plugins": ["angular"],
+  "plugins": [
+    "angular"
+  ],
   "rules": {
     "angular/no-service-method": 0
   },
@@ -15,6 +17,11 @@
   "globals": {
     "angular": true,
     "module": true,
-    "inject": true
+    "inject": true,
+    "jQuery": true,
+    "$": true,
+    "_": true,
+    "swal": true,
+    "ngDescribe": true
   }
 }
