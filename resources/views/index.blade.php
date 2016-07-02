@@ -1,10 +1,15 @@
 <!doctype html>
 <html ng-app="app" ng-strict-di>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>Home &mdash; Jeremy Sarda</title>
+
+	<!-- Meta Data -->
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jeremy Sarda"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
 
 	<!-- PWA Manifest -->
 	<link rel="manifest" href="manifest.json">
