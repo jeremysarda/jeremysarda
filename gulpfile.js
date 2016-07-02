@@ -44,11 +44,11 @@ elixir(function (mix) {
         .angular('./angular/')
         .ngHtml2Js('./angular/**/*.html')
         .concatScripts(scripts, 'final.js')
+        .critical('./angular/material/critical.scss', 'public/css/critical.css')
         .sass('./angular/**/*.scss', 'public/css')
         .styles(styles, './public/css/final.css')
         .version(assets)
         .swPrecache()
-        .critical('./angular/material/critical.scss', 'public/css/critical.css')
         .browserSync({
             proxy: 'jeremysarda.dev'
         })
