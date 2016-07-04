@@ -1,3 +1,4 @@
+import {SplitMenuNavBarComponent} from './app/components/split-menu-nav-bar/split-menu-nav-bar.component';
 import {SplitMenuComponent} from './app/components/split-menu/split-menu.component';
 import {LeftMenuComponent} from './app/components/left-menu/left-menu.component';
 import {AppHeaderComponent} from './app/components/app-header/app-header.component';
@@ -8,6 +9,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('splitMenuNavBar', SplitMenuNavBarComponent)
 	.component('splitMenu', SplitMenuComponent)
 	.component('leftMenu', LeftMenuComponent)
     .component('appHeader', AppHeaderComponent)

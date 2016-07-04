@@ -1,11 +1,11 @@
-class SplitMenuController{
-    constructor(){
+class SplitMenuController {
+    constructor($scope) {
         'ngInject';
 
-        //
+        $scope.currentNavItem = 'page1';
     }
 
-    $onInit(){
+    $onInit() {
     }
 }
 
