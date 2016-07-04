@@ -9,9 +9,9 @@
 
 header.wp-target {
 
-  position: fixed;
-  top: 0;
-  left: 0;
+  //position: fixed;
+  //width: 100%;
+  //height: 100%;
 
   padding: 0;
   z-index: 50;
@@ -53,6 +53,7 @@ header.wp-target {
       stroke-linejoin: round;
       animation: spin 2.5s infinite linear;
     }
+
   }
 }
 
@@ -64,11 +65,9 @@ header.wp-target {
    * Text styling
   **/
 
-  h1,
-  h1:before,
+  h1, h1:before,
   h1 span,
-  nav,
-  nav:before {
+  nav, nav:before {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
@@ -209,7 +208,7 @@ header.wp-target {
   &#{&}- {
 
     &above-the-fold {
-      top: 50px;
+      //top: 50px;
       background: transparent;
       //height: 220px;
       //-webkit-transform: translateY(-50%);
@@ -226,11 +225,11 @@ header.wp-target {
     }
 
     &large {
-      height: 420px;
+      height: 220px;
     }
 
     &small {
-      height: 220px;
+      height: 120px;
     }
 
     &hide {

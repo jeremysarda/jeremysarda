@@ -1,8 +1,8 @@
 ngDescribe({
-    name: 'Test app-view component',
+    name: 'Test split-menu component',
     inject: ['$httpBackend'],
     modules: 'app',
-    element: '<app-view></app-view>',
+    element: '<split-menu></split-menu>',
     tests: function (deps) {
 
         beforeEach(() => {
@@ -12,6 +12,5 @@ ngDescribe({
         it('basic test', () => {
             //
         });
-
     }
 });

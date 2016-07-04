@@ -2,72 +2,72 @@
 /// @param {Height} $height - Element's height
 /// @param {Width} $width - Element's width
 @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 
 /// Shortcut to set position and direction values for an element on one line.
-/// @param {Position} $position - Position value
+/// @param {Position} $position - Position valueΩ
 /// @param {Number} $args [0 0 1px 0] - Arguments representing values for each position direction.
 @mixin position($position, $args) {
-    @each $o in top right bottom left {
-        $i: index($args, $o);
+  @each $o in top right bottom left {
+    $i: index($args, $o);
 
-        @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
-            #{$o}: nth($args, $i + 1);
-        }
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$o}: nth($args, $i + 1);
     }
+  }
 
-    position: $position;
+  position: $position;
 }
 
 /// @alias absolute
 @mixin absolute($args) {
-    @include position("absolute", $args);
+  @include position("absolute", $args);
 }
 
 /// @alias fixed
 @mixin fixed($args) {
-    @include position("fixed", $args);
+  @include position("fixed", $args);
 }
 
 /// @alias relative
 @mixin relative($args) {
-    @include position("relative", $args);
+  @include position("relative", $args);
 }
 
 /// Replace the selector context of an element with a new context.
 /// @param {Selector} $old-context - Old context currently used for the current element
 /// @param {Selector} $new-context - New context to place element in
 @mixin context($old-context, $new-context) {
-    @at-root #{selector-replace(&, $old-context, $new-context)} {
-        @content;
-    }
+  @at-root #{selector-replace(&, $old-context, $new-context)} {
+    @content;
+  }
 }
 
 /// Opposite direction mixin that inverts one or more direction values
 /// @param {Direction} $directions - One or more accepted directions: top, right, bottom, left, ltr, or rtl
 @function opposite-direction($directions) {
-    $opposite-directions: ();
-    $direction-map: (
-        'top': 'bottom',
-        'right': 'left',
-        'bottom': 'top',
-        'left': 'right',
-        'ltr': 'rtl',
-        'rtl': 'ltr'
-    );
+  $opposite-directions: ();
+  $direction-map: (
+          'top': 'bottom',
+          'right': 'left',
+          'bottom': 'top',
+          'left': 'right',
+          'ltr': 'rtl',
+          'rtl': 'ltr'
+  );
 
-    @each $direction in $directions {
-        $opposite-direction: map-get($direction-map, $direction);
-        @if $opposite-direction != null {
-            $opposite-directions: append($opposite-directions, #{$opposite-direction});
-        } @else {
-            @warn "No opposite direction can be found for `#{$direction}`.";
-        }
+  @each $direction in $directions {
+    $opposite-direction: map-get($direction-map, $direction);
+    @if $opposite-direction != null {
+      $opposite-directions: append($opposite-directions, #{$opposite-direction});
+    } @else {
+      @warn "No opposite direction can be found for `#{$direction}`.";
     }
+  }
 
-    @return $opposite-directions;
+  @return $opposite-directions;
 }
 
 /// Triangle helper mixin
@@ -75,43 +75,41 @@
 /// @param {Color} $color [currentcolor] - Triangle color
 /// @param {Length} $size [1em] - Triangle size
 @mixin triangle($direction, $color: currentcolor, $size: 1em) {
-    @if not index(top right bottom left, $direction) {
-        @error "Direction must be either `top`, `right`, `bottom` or `left`.";
-    }
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
 
-    width: 0;
-    height: 0;
-    content: '';
-    z-index: 2;
-    border-#{opposite-direction($direction)}: ($size * 1.5) solid $color;
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-direction($direction)}: ($size * 1.5) solid $color;
 
-    $perpendicular-borders: $size solid transparent;
+  $perpendicular-borders: $size solid transparent;
 
-    @if $direction == top or $direction == bottom {
-        border-left: $perpendicular-borders;
-        border-right: $perpendicular-borders;
-    } @else if $direction == right or $direction == left {
-        border-bottom: $perpendicular-borders;
-        border-top: $perpendicular-borders;
-    }
+  @if $direction == top or $direction == bottom {
+    border-left: $perpendicular-borders;
+    border-right: $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top: $perpendicular-borders;
+  }
 }
 
 @mixin center($xy:xy) {
-    @if $xy == xy {
-        left: 50%;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        @include transform(translateX(-50%) translateY(-50%));
-    }
-    @else if $xy == x {
-        left: 50%;
-        right: auto;
-        @include transform(translateX(-50%));
-    }
-    @else if $xy == y {
-        top: 50%;
-        bottom: auto;
-        @include transform(translateY(-50%));
-    }
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  } @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  } @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
 }

@@ -1,3 +1,5 @@
+import {SplitMenuComponent} from './app/components/split-menu/split-menu.component';
+import {LeftMenuComponent} from './app/components/left-menu/left-menu.component';
 import {AppHeaderComponent} from './app/components/app-header/app-header.component';
 import {AppViewComponent} from './app/components/app-view/app-view.component';
 import {ResetPasswordComponent} from './app/components/reset-password/reset-password.component';
@@ -6,6 +8,8 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('splitMenu', SplitMenuComponent)
+	.component('leftMenu', LeftMenuComponent)
     .component('appHeader', AppHeaderComponent)
     .component('appView', AppViewComponent)
     .component('resetPassword', ResetPasswordComponent)

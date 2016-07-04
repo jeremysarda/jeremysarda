@@ -4,9 +4,12 @@
 	<title>Home &mdash; Jeremy Sarda</title>
 
 	<!-- Meta Data -->
+	<meta name="theme-color" content="#2196F3">
+
 	<meta charset="UTF-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="author" content="Jeremy Sarda"/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
@@ -41,10 +44,8 @@
 	<script type="text/javascript">document.location.href = '/unsupported-browser'</script>
 	<![endif]-->
 </head>
-<body>
-
-<app-view></app-view>
-
+<body layout="column" flex>
+<app-view layout="column" flex></app-view>
 <script async defer>
 	(function (link) {
 		link = document.createElement("link");
@@ -54,8 +55,6 @@
 		document.body.appendChild(link);
 	})();
 </script>
-
 <script src="{!! elixir('js/final.js') !!}" async defer></script>
-
 </body>
 </html>

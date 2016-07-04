@@ -1,19 +1,17 @@
-<div layout="row" layout-align="space-between">
+<div layout-align="space-between">
 
-    <!--
-    <div layout="row" layout-align="center stretch">
-        <a hide-xs class="DemoHeader-link md-subhead" href="https://laravel-angular.readme.io" target="_blank">Docs</a>
-        <a hide-xs class="DemoHeader-link md-subhead" href="https://www.youtube.com/watch?list=PLIiQ4B5FSupiQYLX6kERPV0OhMC7tTbBE&v=_ZWV9KBK2N8" target="_blank">Screencasts</a>
-        <a hide-xs class="DemoHeader-link md-subhead" href="https://github.com/jadjoubran/laravel5-angular-material-starter" target="_blank">Github</a>
-        <iframe class="DemoHeader-github" ng-src="{{vm.githubWidget}}" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-    </div>
-<div class="DemoHeader-spacer"></div>-->
+    <div layout="column" class="wp-target-perspective">
 
-    <div class="wp-target-perspective">
+        <div layout="row" flex="50" class="wp-target-front">
 
-        <div class="wp-target-front">
+            <nav flex="33">
+                <a href="#">Home</a>
+                <a>Recent Projects</a>
+                <a>Experiments</a>
+                <a href="#">Contacts</a>
+            </nav>
 
-            <div class="circle-container">
+            <div flex-grow flex="33" class="circle-container">
                 <div class="outer-outer-ring"></div>
                 <div class="circle">
                     <div class="front">
@@ -27,7 +25,7 @@
                 </div>
             </div>
 
-            <nav>
+            <nav flex="33">
                 <a href="#">Home</a>
                 <a>Recent Projects</a>
                 <a>Experiments</a>
@@ -36,7 +34,7 @@
 
         </div>
 
-        <div class="wp-target-bottom">
+        <div flex="50" class="wp-target-bottom">
             <nav>
                 <a>Project 01</a>
                 <a>Project 02</a>
