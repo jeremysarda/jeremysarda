@@ -41,7 +41,20 @@
 	<script type="text/javascript">document.location.href = '/unsupported-browser'</script>
 	<![endif]-->
 </head>
-<body>
+<body layout='row'>
+
+<app-shell layout="column" layout-fill>
+
+	<!-- Sticky header toolbar -->
+	<md-toolbar layout="column"> ... </md-toolbar>
+
+	<!-- Side-nav -->
+	<md-sidenav class="md-sidenav-left md-whiteframe-z2"
+	            md-component-id="left"
+	            md-is-locked-open="false">
+	</md-sidenav>
+
+</app-shell>
 
 <app-view></app-view>
 
